@@ -1,0 +1,7 @@
+{% extends 'ordenofthesith/base.html' %}
+
+{% block content %}
+    {% for s in sith %}
+        <p><h5>{{ s.name }}</h5> количество черных рук: {{ s.rookie__count }}</p>
+    {% endfor %}
+{% endblock %}

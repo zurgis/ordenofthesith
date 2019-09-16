@@ -1,0 +1,7 @@
+{% extends 'ordenofthesith/base.html' %}
+
+{% block content %}
+    {% for rook in rookie %}
+        <a class="btn btn-light" href="{% url 'ordenofthesith:showAnswers' sith.id rook.id %}">{{ rook }}</a>
+    {% endfor %}
+{% endblock %}

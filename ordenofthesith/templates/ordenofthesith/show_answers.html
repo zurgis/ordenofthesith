@@ -1,0 +1,14 @@
+{% extends 'ordenofthesith/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h3>Имя рекрута - {{ rookie.name }}</h3>
+    {% for answer in answers %}
+        <p>{{ answer.questions }} - {{ answer.content|yesno:"Да,Нет,Не знаю" }}</p>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <button>Взять к себе</button>
+    </form>
+{% endblock %}

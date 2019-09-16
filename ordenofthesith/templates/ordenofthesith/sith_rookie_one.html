@@ -1,0 +1,8 @@
+{% extends 'ordenofthesith/base.html' %}
+
+{% block content %}
+    <h6>Все ситхи, у кого более 1-ой черной руки:</h6>
+    {% for s in sith %}
+        <h6>{{ s|linebreaks }}</h6>
+    {% endfor %}
+{% endblock %}
